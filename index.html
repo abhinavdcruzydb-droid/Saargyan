@@ -2,6 +2,126 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<title>Map Auto Test</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    padding: 16px;
+    line-height: 1.6;
+  }
+  h2 {
+    margin-top: 30px;
+    color: #333;
+  }
+  img {
+    max-width: 100%;
+    width: 500px;
+    display: block;
+    margin: 10px auto 20px;
+    border: 1px solid #ccc;
+  }
+</style>
+</head>
+<body>
+
+<h1>Study Notes – Image Test</h1>
+
+<h3>1️⃣ Direct Image Test (should show below)</h3>
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Maurya_Empire_map.svg" alt="Direct test map">
+
+<hr>
+
+<h3>2️⃣ Auto Map Test (JS will insert maps under headings)</h3>
+
+<h2 data-map="maurya">Mauryan Empire</h2>
+<p>Founded by Chandragupta Maurya with Chanakya.</p>
+
+<h2 data-map="gupta">Gupta Empire</h2>
+<p>Golden Age of ancient India.</p>
+
+<script>
+const mapLinks = {
+  maurya: "https://upload.wikimedia.org/wikipedia/commons/3/3a/Maurya_Empire_map.svg",
+  gupta: "https://upload.wikimedia.org/wikipedia/commons/1/1b/Gupta_Empire_320_-_550_CE.png"
+};
+
+document.querySelectorAll("h2[data-map]").forEach(h => {
+  const key = h.dataset.map;
+  if (mapLinks[key]) {
+    const img = document.createElement("img");
+    img.src = mapLinks[key];
+    img.alt = key + " map";
+    h.insertAdjacentElement("afterend", img);
+  }
+});
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Map Auto Test</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    padding: 16px;
+    line-height: 1.6;
+  }
+  h2 {
+    margin-top: 30px;
+    color: #333;
+  }
+  img {
+    max-width: 100%;
+    width: 500px;
+    display: block;
+    margin: 10px auto 20px;
+    border: 1px solid #ccc;
+  }
+</style>
+</head>
+<body>
+
+<h1>Study Notes – Image Test</h1>
+
+<h3>1️⃣ Direct Image Test (should show below)</h3>
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Maurya_Empire_map.svg" alt="Direct test map">
+
+<hr>
+
+<h3>2️⃣ Auto Map Test (JS will insert maps under headings)</h3>
+
+<h2 data-map="maurya">Mauryan Empire</h2>
+<p>Founded by Chandragupta Maurya with Chanakya.</p>
+
+<h2 data-map="gupta">Gupta Empire</h2>
+<p>Golden Age of ancient India.</p>
+
+<script>
+const mapLinks = {
+  maurya: "https://upload.wikimedia.org/wikipedia/commons/3/3a/Maurya_Empire_map.svg",
+  gupta: "https://upload.wikimedia.org/wikipedia/commons/1/1b/Gupta_Empire_320_-_550_CE.png"
+};
+
+document.querySelectorAll("h2[data-map]").forEach(h => {
+  const key = h.dataset.map;
+  if (mapLinks[key]) {
+    const img = document.createElement("img");
+    img.src = mapLinks[key];
+    img.alt = key + " map";
+    h.insertAdjacentElement("afterend", img);
+  }
+});
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Complete Straits & Channels (Auto-Images & Detailed Notes)</title>
 <style>
